@@ -1,0 +1,19 @@
+**No real findings. `output/item1.md` passes.**
+
+One correction to the premise: the two reviewers don't disagree — both returned PASS. I verified independently rather than relying on that.
+
+Rulebook check against `source/item1.md`:
+
+| Rule | Result |
+|---|---|
+| Keep input filename, Markdown, no whole-file code fence | ✓ |
+| Preserve source title | ✓ `# Apollo Mission` |
+| `## Summary` / `## Details` present | ✓ (lines 3, 6) |
+| No invented facts | ✓ all three claims trace to source lines 3–5 |
+| Dates `YYYY-MM-DD` | ✓ `1969-07-20` |
+| No References section added | ✓ source has none |
+| Edge cases (empty, missing title, >5000 words) | none apply |
+
+The one thing worth naming so it isn't re-raised: the bare year `1961` is not a rule violation. The source gives only a year, so reformatting it as `YYYY-MM-DD` would require inventing a month and day — the "do not invent facts" rule governs here.
+
+`scripts/judge.sh` would also pass this file (Summary, Details, no leading ``` ), though I couldn't execute it — the sandbox declined the call.

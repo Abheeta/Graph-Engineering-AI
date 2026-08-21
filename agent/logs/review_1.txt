@@ -1,0 +1,3 @@
+Checked `output/item1.md` against `source/item1.md` and `rules/rulebook.md`.
+
+PASS
